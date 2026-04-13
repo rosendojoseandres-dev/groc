@@ -107,9 +107,24 @@ function closeCategoriesList() {
 }
 
 openCategoriesNodes.forEach((node) => {
-  node.addEventListener("click", () => {
+  node.addEventListener("click", (event) => {
+    event.preventDefault();
     openCategoriesList(node);
   });
+});
+
+// Fallback global delegation to ensure categorias opens on every page template.
+document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) {
+    return;
+  }
+  const trigger = target.closest("[data-open-categories]");
+  if (!trigger) {
+    return;
+  }
+  event.preventDefault();
+  openCategoriesList(trigger);
 });
 
 closeCategoriesNodes.forEach((node) => {
