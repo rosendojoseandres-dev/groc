@@ -143,17 +143,14 @@ a {
 }
 
 .categories-list-modal {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 55;
-  opacity: 0;
-  pointer-events: none;
-  transition: none;
 }
 
 .categories-list-modal.is-open {
-  opacity: 1;
-  pointer-events: auto;
+  display: block;
 }
 
 .categories-list-overlay {

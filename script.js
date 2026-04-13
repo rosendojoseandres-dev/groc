@@ -95,6 +95,7 @@ function openCategoriesList(triggerNode) {
   }
 
   categoriesModal.classList.add("is-open");
+  categoriesModal.hidden = false;
   categoriesModal.setAttribute("aria-hidden", "false");
 }
 
@@ -103,6 +104,7 @@ function closeCategoriesList() {
     return;
   }
   categoriesModal.classList.remove("is-open");
+  categoriesModal.hidden = true;
   categoriesModal.setAttribute("aria-hidden", "true");
 }
 
