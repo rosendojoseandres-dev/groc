@@ -516,11 +516,11 @@ h3 {
   background: linear-gradient(145deg, #dfd9d2 0%, #f3eee7 100%);
 }
 
-.product-image.tech {
+.product-image.perfume {
   background: linear-gradient(145deg, #d6d1cb 0%, #ede7df 100%);
 }
 
-.product-image.gadget {
+.product-image.perfume-intense {
   background: linear-gradient(145deg, #c3bfb8 0%, #ddd8d1 100%);
 }
 
@@ -539,13 +539,13 @@ h3 {
   background: linear-gradient(145deg, #dfd9d2 0%, #f3eee7 100%);
 }
 
-.modal-image.tech,
-.detail-main-image.tech {
+.modal-image.perfume,
+.detail-main-image.perfume {
   background: linear-gradient(145deg, #d6d1cb 0%, #ede7df 100%);
 }
 
-.modal-image.gadget,
-.detail-main-image.gadget {
+.modal-image.perfume-intense,
+.detail-main-image.perfume-intense {
   background: linear-gradient(145deg, #c3bfb8 0%, #ddd8d1 100%);
 }
 
@@ -1025,11 +1025,11 @@ h3 {
   background: linear-gradient(145deg, #dfd9d2 0%, #f3eee7 100%);
 }
 
-.cart-item-media.tech {
+.cart-item-media.perfume {
   background: linear-gradient(145deg, #d6d1cb 0%, #ede7df 100%);
 }
 
-.cart-item-media.gadget {
+.cart-item-media.perfume-intense {
   background: linear-gradient(145deg, #c3bfb8 0%, #ddd8d1 100%);
 }
 
