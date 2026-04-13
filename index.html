@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Groc
+  <title>Groc sincro
   </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="index.html">Inicio</a>
-        <a href="categorias.html">Categorías</a>
+        <button class="nav-categories-btn" type="button" data-open-categories>Categorías</button>
         <a href="coleccion.html">Colección</a>
         <a href="contacto.html">Contacto</a>
       </nav>
@@ -44,10 +44,19 @@
     </div>
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
       <a href="index.html">Inicio</a>
-      <a href="categorias.html">Categorías</a>
+      <button type="button" data-open-categories>Categorías</button>
       <a href="coleccion.html">Colección</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <div class="categories-list-modal" id="categoriesListModal" aria-hidden="true">
+      <div class="categories-list-overlay" data-close-categories></div>
+      <div class="categories-list-panel" role="dialog" aria-modal="true" aria-label="Lista de categorías">
+        <a href="categoria-ropa.html">Ropa</a>
+        <a href="categoria-calzado.html">Calzado</a>
+        <a href="categoria-accesorios.html">Accesorios</a>
+        <a href="categoria-perfumes.html">Perfumes</a>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -146,15 +155,14 @@
           </div>
           <div class="filter-group" role="group" aria-label="Filtrar productos">
             <button class="chip is-active" data-filter="all" type="button">Todos</button>
-            <button class="chip" data-filter="ropa" type="button">Ropa</button>
-            <button class="chip" data-filter="calzado" type="button">Calzado</button>
-            <button class="chip" data-filter="accesorios" type="button">Accesorios</button>
-            <button class="chip" data-filter="perfumes" type="button">Perfumes</button>
+            <button class="chip" data-filter="hombre" type="button">Hombre</button>
+            <button class="chip" data-filter="mujer" type="button">Mujer</button>
+            <button class="chip" data-filter="oferta" type="button">Oferta</button>
           </div>
         </div>
 
         <div class="product-grid" id="productGrid">
-          <article class="product-card" data-category="ropa" data-name="Camisa Relaxed" data-price="$89.00" data-brand="Groc Studio" data-description="Camisa de corte relajado en tejido suave para uso diario, con acabado minimal y textura ligera." data-specs="Corte relajado|Algodón premium|Disponible en 4 tallas">
+          <article class="product-card" data-category="hombre" data-name="Camisa Relaxed" data-price="$89.00" data-brand="Groc Studio" data-description="Camisa de corte relajado en tejido suave para uso diario, con acabado minimal y textura ligera." data-specs="Corte relajado|Algodón premium|Disponible en 4 tallas">
             <div class="product-media">
               <span class="product-tag">Nuevo</span>
               <div class="product-image"></div>
@@ -167,7 +175,7 @@
             </div>
             <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
           </article>
-          <article class="product-card" data-category="calzado" data-name="Sneaker Mono" data-price="$129.00" data-brand="Groc Lab" data-description="Sneaker urbana de líneas limpias con suela ligera y diseño monocromático para looks técnicos." data-specs="Suela ultraligera|Exterior sintético|Plantilla ergonómica">
+          <article class="product-card" data-category="mujer" data-name="Sneaker Mono" data-price="$129.00" data-brand="Groc Lab" data-description="Sneaker urbana de líneas limpias con suela ligera y diseño monocromático para looks técnicos." data-specs="Suela ultraligera|Exterior sintético|Plantilla ergonómica">
             <div class="product-media">
               <span class="product-tag">Top</span>
               <div class="product-image alt"></div>
@@ -180,7 +188,7 @@
             </div>
             <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
           </article>
-          <article class="product-card" data-category="accesorios" data-name="Bolso Nori" data-price="$74.00" data-brand="Groc Studio" data-description="Bolso compacto de perfil limpio para llevar esenciales diarios sin perder estética premium." data-specs="Correa regulable|Compartimento interno|Material resistente">
+          <article class="product-card" data-category="oferta" data-name="Bolso Nori" data-price="$74.00" data-brand="Groc Studio" data-description="Bolso compacto de perfil limpio para llevar esenciales diarios sin perder estética premium." data-specs="Correa regulable|Compartimento interno|Material resistente">
             <div class="product-media">
               <span class="product-tag">-20%</span>
               <div class="product-image dark"></div>
@@ -193,7 +201,7 @@
             </div>
             <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
           </article>
-          <article class="product-card" data-category="ropa" data-name="Pantalón Straight" data-price="$95.00" data-brand="Groc Studio" data-description="Pantalón recto de inspiración utilitaria, ideal para un fit limpio entre casual y técnico." data-specs="Fit straight|Tejido flexible|Acabado mate">
+          <article class="product-card" data-category="hombre" data-name="Pantalón Straight" data-price="$95.00" data-brand="Groc Studio" data-description="Pantalón recto de inspiración utilitaria, ideal para un fit limpio entre casual y técnico." data-specs="Fit straight|Tejido flexible|Acabado mate">
             <div class="product-media">
               <span class="product-tag">Nuevo</span>
               <div class="product-image soft"></div>
@@ -206,7 +214,7 @@
             </div>
             <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
           </article>
-          <article class="product-card" data-category="perfumes" data-name="Perfume Citrus Noir" data-price="$149.00" data-brand="Groc Fragrance" data-description="Fragancia fresca con notas citricas y fondo amaderado, ideal para uso diario con estilo elegante." data-specs="50ml Eau de Parfum|Salida citrica|Fondo ambar suave">
+          <article class="product-card" data-category="mujer" data-name="Perfume Citrus Noir" data-price="$149.00" data-brand="Groc Fragrance" data-description="Fragancia fresca con notas citricas y fondo amaderado, ideal para uso diario con estilo elegante." data-specs="50ml Eau de Parfum|Salida citrica|Fondo ambar suave">
             <div class="product-media">
               <span class="product-tag">Top</span>
               <div class="product-image perfume"></div>
@@ -219,7 +227,7 @@
             </div>
             <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
           </article>
-          <article class="product-card" data-category="perfumes" data-name="Perfume Velvet Amber" data-price="$199.00" data-brand="Groc Fragrance" data-description="Perfume intenso y sofisticado con notas ambaradas, perfecto para noches y ocasiones especiales." data-specs="100ml Eau de Parfum|Notas orientales|Larga duracion">
+          <article class="product-card" data-category="oferta" data-name="Perfume Velvet Amber" data-price="$199.00" data-brand="Groc Fragrance" data-description="Perfume intenso y sofisticado con notas ambaradas, perfecto para noches y ocasiones especiales." data-specs="100ml Eau de Parfum|Notas orientales|Larga duracion">
             <div class="product-media">
               <span class="product-tag">Nuevo</span>
               <div class="product-image perfume-intense"></div>

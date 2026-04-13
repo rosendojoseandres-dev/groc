@@ -12,6 +12,10 @@ const openCart = document.querySelector(".cart-trigger");
 const closeCartNodes = document.querySelectorAll("[data-close-cart]");
 const menuTrigger = document.querySelector(".menu-trigger");
 const mobileMenu = document.getElementById("mobileMenu");
+const categoriesModal = document.getElementById("categoriesListModal");
+const categoriesPanel = document.querySelector(".categories-list-panel");
+const openCategoriesNodes = document.querySelectorAll("[data-open-categories]");
+const closeCategoriesNodes = document.querySelectorAll("[data-close-categories]");
 const carousel = document.getElementById("mainCarousel");
 const track = document.querySelector(".carousel-track");
 const slides = document.querySelectorAll(".carousel-slide");
@@ -52,15 +56,64 @@ menuTrigger?.addEventListener("click", () => {
   if (!mobileMenu) {
     return;
   }
+  closeCategoriesList();
   const isOpen = mobileMenu.classList.toggle("is-open");
   menuTrigger.setAttribute("aria-expanded", String(isOpen));
 });
 
-mobileMenu?.querySelectorAll("a").forEach((link) => {
+mobileMenu?.querySelectorAll("a, button").forEach((link) => {
   link.addEventListener("click", () => {
     mobileMenu.classList.remove("is-open");
     menuTrigger?.setAttribute("aria-expanded", "false");
   });
+});
+
+function openCategoriesList(triggerNode) {
+  if (!categoriesModal) {
+    return;
+  }
+  mobileMenu?.classList.remove("is-open");
+  menuTrigger?.setAttribute("aria-expanded", "false");
+
+  if (categoriesPanel) {
+    if (window.innerWidth > 760 && triggerNode instanceof HTMLElement) {
+      const triggerRect = triggerNode.getBoundingClientRect();
+      const panelWidth = Math.min(360, window.innerWidth * 0.92);
+      const minLeft = 16;
+      const maxLeft = window.innerWidth - panelWidth - 16;
+      const alignedLeft = Math.max(minLeft, Math.min(triggerRect.left - 18, maxLeft));
+      categoriesPanel.style.left = `${alignedLeft}px`;
+      categoriesPanel.style.top = `${Math.round(triggerRect.bottom + 10)}px`;
+      categoriesPanel.style.right = "auto";
+      categoriesPanel.style.transform = "none";
+    } else {
+      categoriesPanel.style.left = "";
+      categoriesPanel.style.top = "";
+      categoriesPanel.style.right = "";
+      categoriesPanel.style.transform = "";
+    }
+  }
+
+  categoriesModal.classList.add("is-open");
+  categoriesModal.setAttribute("aria-hidden", "false");
+}
+
+function closeCategoriesList() {
+  if (!categoriesModal) {
+    return;
+  }
+  categoriesModal.classList.remove("is-open");
+  categoriesModal.setAttribute("aria-hidden", "true");
+}
+
+openCategoriesNodes.forEach((node) => {
+  node.addEventListener("click", () => {
+    openCategoriesList(node);
+  });
+});
+
+closeCategoriesNodes.forEach((node) => {
+  node.addEventListener("click", closeCategoriesList);
 });
 
 chips.forEach((chip) => {

@@ -22,7 +22,7 @@
       </a>
       <nav class="nav" aria-label="Principal">
         <a href="index.html">Inicio</a>
-        <a href="categorias.html">Categorias</a>
+        <button class="nav-categories-btn" type="button" data-open-categories>Categorias</button>
         <a href="coleccion.html">Coleccion</a>
         <a href="contacto.html">Contacto</a>
       </nav>
@@ -43,10 +43,19 @@
     </div>
     <nav class="mobile-menu" id="mobileMenu" aria-label="Menu movil">
       <a href="index.html">Inicio</a>
-      <a href="categorias.html">Categorias</a>
+      <button type="button" data-open-categories>Categorias</button>
       <a href="coleccion.html">Coleccion</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+    <div class="categories-list-modal" id="categoriesListModal" aria-hidden="true">
+      <div class="categories-list-overlay" data-close-categories></div>
+      <div class="categories-list-panel" role="dialog" aria-modal="true" aria-label="Lista de categorias">
+        <a href="categoria-ropa.html">Ropa</a>
+        <a href="categoria-calzado.html">Calzado</a>
+        <a href="categoria-accesorios.html">Accesorios</a>
+        <a href="categoria-perfumes.html">Perfumes</a>
+      </div>
+    </div>
   </header>
 
   <main>
