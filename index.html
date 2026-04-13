@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groc
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <button class="menu-trigger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#" aria-label="Groc">
+        <img src="assets/groc.svg" alt="Groc">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="coleccion.html">Colección</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-tools">
+        <form class="search-box" role="search" aria-label="Buscar productos">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11 4a7 7 0 1 0 4.41 12.44l3.58 3.58 1.41-1.41-3.58-3.58A7 7 0 0 0 11 4zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"></path>
+          </svg>
+          <input type="search" placeholder="Buscar ropa, tecnología..." aria-label="Buscar">
+        </form>
+        <button class="icon-btn cart-trigger" type="button" aria-label="Abrir bolsa">
+          <span class="bag-wrap">
+            <i class="hgi hgi-stroke hgi-shopping-bag-01" aria-hidden="true"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="categorias.html">Categorías</a>
+      <a href="coleccion.html">Colección</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-carousel">
+      <div class="container">
+        <div class="carousel" id="mainCarousel" aria-label="Carrusel principal">
+          <div class="carousel-track">
+            <article class="carousel-slide bg-one is-active">
+              <div class="slide-copy">
+                <p class="eyebrow">Nueva colección</p>
+                <h1>Tecnología y estilo en una sola tienda</h1>
+                <p class="lead">
+                  Descubre productos curados para tu día a día: moda, gadgets y accesorios
+                  con una experiencia visual limpia y premium.
+                </p>
+                <div class="hero-actions">
+                  <a href="#productos" class="btn btn-primary">Comprar ahora</a>
+                  <a href="#coleccion" class="btn btn-ghost">Ver colección</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-slide bg-two">
+              <div class="slide-copy">
+                <p class="eyebrow">Especial gadgets</p>
+                <h1>Equipos inteligentes para cada rutina</h1>
+                <p class="lead">
+                  Selección de audio, wearables y accesorios con entrega rápida y diseño minimal.
+                </p>
+                <div class="hero-actions">
+                  <a href="#productos" class="btn btn-primary">Explorar tecnología</a>
+                  <a href="#categorias" class="btn btn-ghost">Ver categorías</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-slide bg-three">
+              <div class="slide-copy">
+                <p class="eyebrow">Drop semanal</p>
+                <h1>Looks esenciales y accesorios que combinan</h1>
+                <p class="lead">
+                  Prendas atemporales y tecnología utilitaria para construir un estilo funcional.
+                </p>
+                <div class="hero-actions">
+                  <a href="#productos" class="btn btn-primary">Ver destacados</a>
+                  <a href="#contacto" class="btn btn-ghost">Atención al cliente</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="carousel-controls">
+            <div class="carousel-dots" role="tablist" aria-label="Seleccionar slide">
+              <button class="dot is-active" type="button" aria-label="Slide 1"></button>
+              <button class="dot" type="button" aria-label="Slide 2"></button>
+              <button class="dot" type="button" aria-label="Slide 3"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Categorías</p>
+          <h2>Selecciona tu estilo</h2>
+        </div>
+        <div class="category-grid">
+          <article class="category-item">
+            <h3>Ropa</h3>
+            <p>Prendas con cortes limpios y tonos neutros.</p>
+          </article>
+          <article class="category-item">
+            <h3>Calzado</h3>
+            <p>Confort minimal para todos los días.</p>
+          </article>
+          <article class="category-item">
+            <h3>Accesorios</h3>
+            <p>Detalles sutiles que elevan tu look.</p>
+          </article>
+          <article class="category-item">
+            <h3>Tecnología</h3>
+            <p>Dispositivos y accesorios para un día más productivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section products">
+      <div class="container">
+        <div class="section-head section-head-inline">
+          <div>
+            <p class="eyebrow">Destacados</p>
+            <h2>Productos esenciales</h2>
+          </div>
+          <div class="filter-group" role="group" aria-label="Filtrar productos">
+            <button class="chip is-active" data-filter="all" type="button">Todos</button>
+            <button class="chip" data-filter="ropa" type="button">Ropa</button>
+            <button class="chip" data-filter="calzado" type="button">Calzado</button>
+            <button class="chip" data-filter="accesorios" type="button">Accesorios</button>
+            <button class="chip" data-filter="tecnologia" type="button">Tecnología</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="ropa" data-name="Camisa Relaxed" data-price="$89.00" data-brand="Groc Studio" data-description="Camisa de corte relajado en tejido suave para uso diario, con acabado minimal y textura ligera." data-specs="Corte relajado|Algodón premium|Disponible en 4 tallas">
+            <div class="product-media">
+              <span class="product-tag">Nuevo</span>
+              <div class="product-image"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Studio</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Camisa Relaxed</button>
+              <p class="product-price">$89.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+          <article class="product-card" data-category="calzado" data-name="Sneaker Mono" data-price="$129.00" data-brand="Groc Lab" data-description="Sneaker urbana de líneas limpias con suela ligera y diseño monocromático para looks técnicos." data-specs="Suela ultraligera|Exterior sintético|Plantilla ergonómica">
+            <div class="product-media">
+              <span class="product-tag">Top</span>
+              <div class="product-image alt"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Lab</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Sneaker Mono</button>
+              <p class="product-price">$129.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+          <article class="product-card" data-category="accesorios" data-name="Bolso Nori" data-price="$74.00" data-brand="Groc Studio" data-description="Bolso compacto de perfil limpio para llevar esenciales diarios sin perder estética premium." data-specs="Correa regulable|Compartimento interno|Material resistente">
+            <div class="product-media">
+              <span class="product-tag">-20%</span>
+              <div class="product-image dark"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Studio</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Bolso Nori</button>
+              <p class="product-price">$74.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+          <article class="product-card" data-category="ropa" data-name="Pantalón Straight" data-price="$95.00" data-brand="Groc Studio" data-description="Pantalón recto de inspiración utilitaria, ideal para un fit limpio entre casual y técnico." data-specs="Fit straight|Tejido flexible|Acabado mate">
+            <div class="product-media">
+              <span class="product-tag">Nuevo</span>
+              <div class="product-image soft"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Studio</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Pantalón Straight</button>
+              <p class="product-price">$95.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+          <article class="product-card" data-category="tecnologia" data-name="Auriculares Air Tone" data-price="$149.00" data-brand="Groc Tech" data-description="Auriculares inalámbricos con cancelación pasiva y perfil sonoro equilibrado para trabajo y ocio." data-specs="Batería 32h|Bluetooth 5.3|Carga rápida USB-C">
+            <div class="product-media">
+              <span class="product-tag">Top</span>
+              <div class="product-image tech"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Tech</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Auriculares Air Tone</button>
+              <p class="product-price">$149.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+          <article class="product-card" data-category="tecnologia" data-name="Smartwatch Core" data-price="$199.00" data-brand="Groc Tech" data-description="Reloj inteligente con diseño sobrio, seguimiento de salud y notificaciones para productividad." data-specs="Pantalla AMOLED|Resistencia IP68|Monitoreo 24/7">
+            <div class="product-media">
+              <span class="product-tag">Nuevo</span>
+              <div class="product-image gadget"></div>
+              <button class="quick-btn" type="button">Vista rápida</button>
+            </div>
+            <p class="product-brand">Groc Tech</p>
+            <div class="product-info">
+              <button class="product-title product-link" type="button">Smartwatch Core</button>
+              <p class="product-price">$199.00</p>
+            </div>
+            <button class="btn btn-primary add-to-cart" type="button">Añadir a bolsa</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coleccion" class="section showcase">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Categorías destacadas</p>
+          <h2>Audio y tecnología para tu espacio</h2>
+        </div>
+        <div class="showcase-grid">
+          <a class="showcase-card card-accessories" href="#productos">
+            <span class="showcase-title">Accessories</span>
+            <span class="showcase-arrow">→</span>
+          </a>
+          <a class="showcase-card card-headphones" href="#productos">
+            <span class="showcase-title">Headphones</span>
+            <span class="showcase-arrow">→</span>
+          </a>
+          <a class="showcase-card card-turntables" href="#productos">
+            <span class="showcase-title">Turntables</span>
+            <span class="showcase-arrow">→</span>
+          </a>
+          <a class="showcase-card card-speakers" href="#productos">
+            <span class="showcase-title">Speakers</span>
+            <span class="showcase-arrow">→</span>
+          </a>
+          <a class="showcase-card card-earphones" href="#productos">
+            <span class="showcase-title">Earphones</span>
+            <span class="showcase-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offer-zone" id="ofertas">
+      <div class="container">
+        <div class="offer-hero">
+          <div class="offer-main-visual" aria-hidden="true"></div>
+          <div class="offer-product-card">
+            <div class="offer-thumb"></div>
+            <div class="offer-copy">
+              <p class="offer-label">Headphones</p>
+              <h3>Sonic Pro 800 (Dark Grey)</h3>
+              <a href="#productos">Ver producto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-flash">
+        <div class="container offer-flash-wrap">
+          <div class="offer-text">
+            <h2>Flash sale!</h2>
+            <p>Obtén 20% de descuento en compras mayores a $99.</p>
+          </div>
+          <div class="offer-timer" id="offerTimer">
+            <div class="time-box">
+              <strong id="timeDays">02</strong>
+              <span>Días</span>
+            </div>
+            <div class="time-box">
+              <strong id="timeHours">05</strong>
+              <span>Horas</span>
+            </div>
+            <div class="time-box">
+              <strong id="timeMinutes">56</strong>
+              <span>Min</span>
+            </div>
+            <div class="time-box">
+              <strong id="timeSeconds">14</strong>
+              <span>Seg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <a class="brand" href="#" aria-label="Groc">
+          <img src="assets/groc.svg" alt="Groc">
+        </a>
+        <p>Una experiencia de compra moderna.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Términos</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-overlay" data-close-cart></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Bolsa de compra">
+      <div class="cart-header">
+        <h3>Tu bolsa</h3>
+        <button class="close-cart" type="button" data-close-cart aria-label="Cerrar bolsa">×</button>
+      </div>
+      <div class="cart-content">
+        <p class="cart-empty" id="cartEmpty">Tu bolsa está vacía.</p>
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button class="btn btn-primary full" type="button">Finalizar compra</button>
+        <button class="btn btn-ghost full" type="button" data-close-cart>Seguir comprando</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="product-modal" id="quickPreview" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-body preview-body" role="dialog" aria-modal="true" aria-label="Vista previa de producto">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar vista previa">×</button>
+      <div class="modal-media">
+        <div class="modal-image" id="previewImage"></div>
+      </div>
+      <div class="modal-content">
+        <p class="modal-brand" id="previewBrand"></p>
+        <h3 class="modal-title" id="previewTitle"></h3>
+        <p class="modal-price" id="previewPrice"></p>
+        <p class="modal-description" id="previewDescription"></p>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="previewAddToBag" type="button">Añadir a bolsa</button>
+          <button class="btn btn-ghost" id="openDetailFromPreview" type="button">Abrir producto</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-modal" id="productDetail" aria-hidden="true">
+    <div class="modal-overlay" data-close-detail></div>
+    <div class="modal-body detail-body" role="dialog" aria-modal="true" aria-label="Detalle de producto">
+      <button class="modal-close" type="button" data-close-detail aria-label="Cerrar detalle">×</button>
+      <div class="detail-gallery">
+        <div class="detail-main-image" id="detailImage"></div>
+        <div class="detail-thumbs">
+          <button class="thumb is-active" type="button"></button>
+          <button class="thumb" type="button"></button>
+          <button class="thumb" type="button"></button>
+        </div>
+      </div>
+      <div class="detail-info">
+        <p class="modal-brand" id="detailBrand"></p>
+        <h3 class="modal-title" id="detailTitle"></h3>
+        <p class="modal-price" id="detailPrice"></p>
+        <p class="modal-description" id="detailDescription"></p>
+        <ul class="detail-specs" id="detailSpecs"></ul>
+        <div class="detail-cta">
+          <button class="btn btn-primary full" id="detailAddToBag" type="button">Añadir a bolsa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groc | Categorias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <button class="menu-trigger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="index.html" aria-label="Groc">
+        <img src="assets/groc.svg" alt="Groc">
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="coleccion.html">Coleccion</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <div class="header-tools">
+        <form class="search-box" role="search" aria-label="Buscar productos">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M11 4a7 7 0 1 0 4.41 12.44l3.58 3.58 1.41-1.41-3.58-3.58A7 7 0 0 0 11 4zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"></path>
+          </svg>
+          <input type="search" placeholder="Buscar ropa, tecnologia..." aria-label="Buscar">
+        </form>
+        <button class="icon-btn cart-trigger" type="button" aria-label="Abrir bolsa">
+          <span class="bag-wrap">
+            <i class="hgi hgi-stroke hgi-shopping-bag-01" aria-hidden="true"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menu movil">
+      <a href="index.html">Inicio</a>
+      <a href="categorias.html">Categorias</a>
+      <a href="coleccion.html">Coleccion</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <p class="eyebrow">Categorias</p>
+        <h1>Explora todo el catalogo por estilo</h1>
+        <p class="lead">Selecciona una categoria para descubrir productos curados con enfoque minimalista y funcional.</p>
+      </div>
+    </section>
+
+    <section class="section category-page">
+      <div class="container category-page-grid">
+        <article class="category-page-card">
+          <h3>Ropa</h3>
+          <p>Basicos premium y siluetas limpias para uso diario.</p>
+          <a href="index.html#productos">Ver productos</a>
+        </article>
+        <article class="category-page-card">
+          <h3>Calzado</h3>
+          <p>Diseno ergonomico con materiales ligeros y tonos neutros.</p>
+          <a href="index.html#productos">Ver productos</a>
+        </article>
+        <article class="category-page-card">
+          <h3>Accesorios</h3>
+          <p>Detalles sobrios que elevan cualquier combinacion.</p>
+          <a href="index.html#productos">Ver productos</a>
+        </article>
+        <article class="category-page-card">
+          <h3>Tecnologia</h3>
+          <p>Gadgets utiles para una rutina eficiente y moderna.</p>
+          <a href="index.html#productos">Ver productos</a>
+        </article>
+        <article class="category-page-card">
+          <h3>Audio</h3>
+          <p>Auriculares y parlantes con diseno discreto y gran desempeño.</p>
+          <a href="index.html#productos">Ver productos</a>
+        </article>
+        <article class="category-page-card">
+          <h3>Ofertas</h3>
+          <p>Descuentos seleccionados con stock limitado.</p>
+          <a href="index.html#ofertas">Ver ofertas</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <a class="brand" href="index.html" aria-label="Groc">
+          <img src="assets/groc.svg" alt="Groc">
+        </a>
+        <p>Una experiencia de compra moderna.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">Terminos</a>
+        <a href="#">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-panel" id="cartPanel" aria-hidden="true">
+    <div class="cart-overlay" data-close-cart></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Bolsa de compra">
+      <div class="cart-header">
+        <h3>Tu bolsa</h3>
+        <button class="close-cart" type="button" data-close-cart aria-label="Cerrar bolsa">×</button>
+      </div>
+      <div class="cart-content">
+        <p class="cart-empty" id="cartEmpty">Tu bolsa esta vacia.</p>
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-summary">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">$0.00</strong>
+        </div>
+        <button class="btn btn-primary full" type="button">Finalizar compra</button>
+        <button class="btn btn-ghost full" type="button" data-close-cart>Seguir comprando</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
